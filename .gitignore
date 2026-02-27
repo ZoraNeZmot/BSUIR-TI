@@ -1,0 +1,16 @@
+## Build outputs - ALWAYS ignore these
+**/bin/
+**/obj/
+*.dll
+*.pdb
+
+## Visual Studio files
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+## Temporary files
+*.tmp
+*.log
