@@ -15,7 +15,6 @@ namespace Cipher1
     public partial class CipherFont : Form
     {
         protected static bool IsRussianChar(char c) { return (c >= 'А' && c <= 'я') || c == 'ё' || c == 'Ё'; }
-        protected static bool IsRussianText(string s) { return Regex.IsMatch(s, @"^\p{IsCyrillic}+$"); }
         public static string RemoveNonAlphabetic(string input)
         {
             if (string.IsNullOrEmpty(input))
@@ -51,13 +50,14 @@ namespace Cipher1
                 openFileDialog.RestoreDirectory = true;
                 if (openFileDialog.ShowDialog() == DialogResult.OK)
                 {
-                    // Get the selected file path
                     string selectedFilePath = openFileDialog.FileName;
                     textFile.Text = selectedFilePath;
+         
+                    textIn.Text = File.ReadAllText(textFile.Text);
+
                 }
             }
 
-            textIn.Text = File.ReadAllText(textFile.Text);
         }
 
 

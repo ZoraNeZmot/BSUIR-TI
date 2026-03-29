@@ -3,6 +3,7 @@
 **/obj/
 *.dll
 *.pdb
+**/res/
 
 ## Visual Studio files
 .vs/

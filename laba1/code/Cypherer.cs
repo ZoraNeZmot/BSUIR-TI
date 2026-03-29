@@ -81,7 +81,6 @@ namespace Cipher1
                 }
             }
 
-            // Get column order based on key
             int[] columnOrder = GetColumnOrder(key);
 
             // Read columns in the order determined by the key
@@ -114,14 +113,11 @@ namespace Cipher1
             int totalChars = cipherText.Length;
             int rows = (int)Math.Ceiling((double)totalChars / columns);
 
-            // Calculate how many columns have 'rows' characters vs 'rows-1' characters
             int fullColumns = totalChars % columns;
             if (fullColumns == 0) fullColumns = columns;
 
-            // Get column order based on key
             int[] columnOrder = GetColumnOrder(key);
 
-            // Calculate how many characters go into each column
             int[] columnLengths = new int[columns];
             for (int i = 0; i < columns; i++)
             {
@@ -164,7 +160,6 @@ namespace Cipher1
 
 
 
-        // Define the Russian alphabet in order (33 letters)
         private const string RussianAlphabet = "АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ";
 
         protected static string CipherVisner(string content, string key)
