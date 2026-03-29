@@ -20,10 +20,8 @@ const (
 	BitsToShow = 108 // Количество бит для отображения
 )
 
-// Taps для многочлена x^40 + x^21 + x^19 + x^2 + 1
 var Taps = []int{40, 21, 19, 2}
 
-// CustomTheme - пользовательская тема для приложения
 type CustomTheme struct {
 	fyne.Theme
 }
@@ -58,7 +56,7 @@ func NewLFSR(seed string, taps []int) *LFSR {
 	return &LFSR{state: state, taps: taps}
 }
 
-// NextBit генерирует следующий бит (как в примере)
+// NextBit генерирует следующий бит
 func (l *LFSR) NextBit() byte {
 	// Выходной бит - первый элемент state (младший бит)
 	outBit := l.state[0]
@@ -68,19 +66,17 @@ func (l *LFSR) NextBit() byte {
 	feedback ^= l.state[17] // позиция 19
 	feedback ^= l.state[0]  // позиция 2
 
-	// Сдвиг влево (как в примере)
+	// Сдвиг влево
 	for i := 0; i < Degree-1; i++ {
 		l.state[i] = l.state[i+1]
 	}
 
-	// Помещаем feedback в старший бит (как в примере)
 	l.state[Degree-1] = feedback
 
 	return outBit
 }
 
 // ProcessData обрабатывает данные (шифрование/дешифрование)
-// Возвращает: outputData, firstKeyBytes, lastKeyBytes
 func (l *LFSR) ProcessData(inputData []byte, limitBytes int) (outputData []byte, firstKey, lastKey []byte) {
 	outputData = make([]byte, len(inputData))
 	firstKey = make([]byte, 0, limitBytes)
