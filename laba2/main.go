@@ -58,7 +58,6 @@ func NewLFSR(seed string, taps []int) *LFSR {
 
 // NextBit генерирует следующий бит
 func (l *LFSR) NextBit() byte {
-	// Выходной бит - первый элемент state (младший бит)
 	outBit := l.state[0]
 
 	feedback := l.state[38] // позиция 40

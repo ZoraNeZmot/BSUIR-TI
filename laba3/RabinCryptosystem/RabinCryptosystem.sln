@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 18
+VisualStudioVersion = 18.3.11527.330 d18.3
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Encryptor", "Encryptor\Encryptor.csproj", "{7EF84302-057B-44A0-9253-9D703611C845}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RabinCryptosystem", "RabinCryptosystem\RabinCryptosystem.csproj", "{F7B59CBE-038F-44FA-AEBD-356C0F623E4D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7EF84302-057B-44A0-9253-9D703611C845}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7EF84302-057B-44A0-9253-9D703611C845}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7EF84302-057B-44A0-9253-9D703611C845}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7EF84302-057B-44A0-9253-9D703611C845}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F7B59CBE-038F-44FA-AEBD-356C0F623E4D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7B59CBE-038F-44FA-AEBD-356C0F623E4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7B59CBE-038F-44FA-AEBD-356C0F623E4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7B59CBE-038F-44FA-AEBD-356C0F623E4D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {26C28E25-63BE-40E8-B1CF-AAB972B60912}
+	EndGlobalSection
+EndGlobal
